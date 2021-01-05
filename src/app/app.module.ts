@@ -6,10 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { ExceptionInterceptor } from 'http.interceptor.service';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
@@ -19,6 +22,14 @@ import { ProductListComponent } from './product-list/product-list.component';
     AppComponent,
     TopBarComponent,
     ProductListComponent
+  ],
+  providers:[
+    HttpClientModule,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ExceptionInterceptor,
+      multi: true
+    },
   ],
   bootstrap: [ AppComponent ]
 })

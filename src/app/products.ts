@@ -1,4 +1,6 @@
-export const products = [
+import { Component, OnInit } from '@angular/core';
+
+export const productsStatic = [
   {
     name: 'Phone XL',
     price: 799,
@@ -16,6 +18,15 @@ export const products = [
   }
 ];
 
+
+export class productsStatic2{
+  Id: string
+  Id2?:string
+
+  constructor () {
+    //Object.assign(this.Id2,this.Id);
+  }
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

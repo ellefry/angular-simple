@@ -3,3 +3,11 @@
 ################################################################################
 
 /node_modules
+/.vs
+/dist/styles.a04c64887307a303cbd2.css
+/dist/runtime.ec2944dd8b20ec099bf3.js
+/dist/polyfills.eb98f75afdfd230fe2e7.js
+/dist/main.1610947924b46915c639.js
+/dist/index.html
+/dist/assets/shipping.json
+/dist/3rdpartylicenses.txt
